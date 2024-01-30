@@ -12102,9 +12102,16 @@ a {
 
 /* Logo styles */
 .custom-logo {
-  max-height: 70px; /* Adjust max-height as needed */
+  max-height: 85px; /* Default max-height */
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .custom-logo {
+    max-height: 75px; /* Adjust max-height for smaller screens */
+    content: url("assets/mainlogo.png");
+  }
+}
 /* Navbar brand styles */
 .navbar-brand {
   color: #090c9b;
