@@ -1,0 +1,476 @@
+// Variable overrides first
+$primary: rgb(28, 0, 153);
+$enable-shadows: true;
+$prefix: "mo-";
+
+$highlight: #e6f024ea;
+$darkhighlight: #fde74c;
+
+$dark: rgb(153, 0, 0);
+
+    
+
+// Then import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// add more custom code here 
+
+/////////////////////////////////// BACKGROUND & ASSETS ////////////////////////////////////////////////////
+
+body{
+    // background: linear-gradient(180deg, #2E5E74ff, #406B79ff, #53787Dff, #658582ff, #789286ff, #8A9F8Bff, #9DAC8Fff, #AFB994ff, #C2C698ff, #D4D39Dff);
+    background: linear-gradient(180deg, rgb(254, 254, 254), rgba(255, 255, 255, 0.848));    
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+
+    .aboutbg {
+        background-image: linear-gradient(180deg, rgba(19, 2, 2, 0.07), rgba(7, 1, 1, 0.285)), url('assets/Header.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding-top: 300px;
+        height: 850px;
+    }
+    
+    @media (max-width: 768px) {
+        .aboutbg {
+            height: 750px;
+            background-attachment: scroll; /* Disable parallax effect on smaller screens if needed */
+        }
+    }
+    
+    @media (min-width: 2000px) {
+        .aboutbg {
+            height: 950px;
+            background-size: contain;
+
+        }
+    }
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////   TEXT ELEMENTS /////////////////////////////////
+
+.bioTitle{
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+}
+
+li{
+    color: rgba(242, 254, 255, 0.859);
+}
+
+p{
+    color: rgba(242, 254, 255, 0.859);
+}
+
+form{
+    color: rgba(242, 254, 255, 0.859);
+}
+
+a{
+    color: #ffffff; /* Set the desired text color (in this case, black) */
+    text-decoration: none; /* Remove the underline */
+}
+
+.glowText{
+    color: white;
+}
+
+.glowText:hover{
+    color: #bbff0e;
+    text-shadow: 0 0 5px #ffee10;
+    transition: all 0.4s ease 0s;
+}
+
+.titleBlock{
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    background-color: antiquewhite;
+
+}
+
+.titleBlockTwo{
+    padding: 5px;
+    padding-top: 15px;
+    background-color: antiquewhite;
+
+}
+
+.bgOpacity{
+    background: hsla(180, 100%, 1%, 0.17);
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////-- NAVIGATION BAR --////////////////////////////////////////////////////////////
+
+/* Navbar styles */
+.navbar {
+    min-height: 70px;
+    padding: 0 15px;
+    line-height: 70px;
+  }
+  
+  /* Logo styles */
+  .custom-logo {
+    max-height: 75px; /* Adjust max-height as needed */
+  }
+  
+  /* Navbar brand styles */
+  .navbar-brand {
+    color: #090c9b;
+  }
+  
+  .navbar-brand:hover {
+    color: #090c9b;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  /* Navbar links styles */
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 25px;
+  }
+  
+  .nav-link:hover {
+    color: black;
+    border-top-color: #090c9b;
+    border-bottom-color: #090c9b;
+    transition: all 0.8s ease 0s;
+  }
+  
+  /* Navbar toggler styles */
+  .navbar-toggler {
+    padding: 10px 15px;
+    font-size: 24px;
+    color: #090c9b;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-toggler {
+      padding: 10px 15px;
+      font-size: 24px;
+      color: #090c9b;
+    }
+  }
+  
+////////////////////////////////////////////////////////////////////////////////
+/* ------------------------------ About Section 1 ----------------------------- */
+
+.about-section {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #090c9b;
+}
+
+.about-content {
+    flex: 1;
+    padding: 15px;
+    border-right-style: solid;
+    border-width:0.1em;
+    border-color: #090c9b;
+
+    color: black;
+
+    
+}
+
+.about-content h1 {
+    font-size: 35px;
+    font-style: italic;
+
+
+    margin-bottom: 20px;
+    color: #090c9b;
+
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 22px;
+    color: black;
+
+}
+
+.about-image {
+    flex: 1;
+    padding: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-content, .about-image {
+        flex: 1 1 auto;
+        border-right-style: none;
+
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+/* ------------------------------ About Section 2 ----------------------------- */
+
+.about-section2 {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-content2 {
+    flex: 1;
+    padding: 15px;
+    border-left-style: solid;
+    border-width:0.1em;
+    border-color: #090c9b;
+    
+}
+
+.about-content2 h1 {
+    font-size: 35px;
+    font-style: italic;
+
+
+    margin-bottom: 20px;
+    color: #090c9b;
+    text-align: center;
+}
+
+.about-content2 h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content2 p {
+    font-size: 22px;
+    color: black;
+
+}
+
+.about-image2 {
+    flex: 1;
+    padding: 15px;
+}
+
+.about-image2 img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .about-section2 {
+        flex-direction: column;
+    }
+
+    .about-content2, .about-image {
+        flex: 1 1 auto;
+        border-left-style: none;
+
+    }
+
+    .about-image2 {
+        order: 1; /* Adjust the order to place the image on top */
+    }
+}
+
+/* ------------------------ About Aspiration Section ------------------------ */
+
+.about-aspiration {
+    flex: 1;
+    padding: 15px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width:0.1em;
+    border-color: #090c9b;
+    
+}
+
+.about-aspiration h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.about-aspiration h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-aspiration p {
+    font-size: 22px;
+}
+
+/* --------------------------- About Certification -------------------------- */
+
+.divider{
+    border-top-style: solid;
+    border-width:0.1em;
+    border-color: #090c9b;
+
+    padding-top: 20px;
+}
+
+
+/* ----------------------------- CONTACT SECTION ---------------------------- */
+
+.contact-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+  }
+
+  .contact-info h4 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  .decorative-line {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+  }
+
+  /* ------------------------- Immigration Law Section ------------------------ */
+
+  .titleFront{
+    font-size: 35px;
+    font-style: italic;
+
+
+    margin-bottom: 20px;
+    color: #090c9b;
+
+    text-align: center;
+  }
+
+  .immigrantText{
+    color: black;
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+
+  }
+
+  .immigrantTextTwo{
+    color: black;
+    font-size: 22px;
+  }
+
+
+  /* ----------------------------- Fade In Effect ----------------------------- */
+
+  .fade-in {
+    opacity: 0;
+    transform:translateX(50px);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fade-in.fade-in-visible {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+
+  /* ------------------ Main Areas Of Practice - Immigration ------------------ */
+
+
+  .dividerTitle{
+
+    border-width:0.1em;
+    border-bottom-style: solid;
+
+    border-color: #090c9b;
+    color: #090c9b;
+
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: -20px;
+    background-color: antiquewhite;
+}
+
+
+
+    /* Add custom styles here */
+    /* Example: */
+    .expertise-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      .expertise-box:hover {
+        transform: scale(1.05);
+      }
